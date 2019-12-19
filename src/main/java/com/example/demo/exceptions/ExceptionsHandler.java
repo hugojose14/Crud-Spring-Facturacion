@@ -19,7 +19,7 @@ private static final Logger LOG= Logger.getLogger(ExceptionsHandler.class.getNam
 	public ErrorCode handleExeption(Exception e) {
 		ErrorCode ec= new ErrorCode();
 		ec.setCodigo(UUID.randomUUID().toString());
-		ec.setMensaje("error no encontrado");
+		ec.setMensaje("El error no fue encontrado");
 		logError(ec, e);
 
 		
