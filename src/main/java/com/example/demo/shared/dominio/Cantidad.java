@@ -1,6 +1,6 @@
 package com.example.demo.shared.dominio;
 
-import com.example.demo.exceptions.NegativoExeception;
+import com.example.demo.exceptions.ValorException;
 
 public class Cantidad {
 
@@ -9,17 +9,9 @@ public class Cantidad {
 	public Cantidad(Integer cantidad) {
 		
 		this.cantidad= cantidad;
-		if (cantidad<1) {
-			throw new NegativoExeception();
-			
-		}
-		
-	
+		if (cantidad<1) throw new ValorException();
 	}
-
 	public Integer getCantidad() {
 		return cantidad;
 	}
-	
-	
 }

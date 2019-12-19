@@ -1,6 +1,6 @@
 package com.example.demo.shared.dominio;
 
-import com.example.demo.exceptions.CaracteresExeception;
+import com.example.demo.exceptions.ValoresCaracterException;
 
 public class Codigo {
 	
@@ -9,14 +9,9 @@ public class Codigo {
 	public Codigo(String codigo) {
 	
 		this.codigo = codigo;
-		if ( codigo.length() >1000) {
-			
-			throw new CaracteresExeception();
-		}
+		if ( codigo.length() >1000) throw new ValoresCaracterException();
 	}
-
 	public String getCodigo() {
 		return codigo;
 	}
-
 }

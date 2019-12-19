@@ -1,6 +1,6 @@
 package com.example.demo.shared.dominio;
 
-import com.example.demo.exceptions.RangoExeception;
+import com.example.demo.exceptions.AlcanceValorException;
 
 public class Id {
 
@@ -10,7 +10,7 @@ public class Id {
 		this.id = id;
 		if (id<0) {
 			
-			throw new RangoExeception();
+			throw new AlcanceValorException();
 		}
 		
 		

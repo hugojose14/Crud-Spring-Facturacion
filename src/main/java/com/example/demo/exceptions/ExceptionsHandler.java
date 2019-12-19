@@ -38,9 +38,9 @@ private static final Logger LOG= Logger.getLogger(ExceptionsHandler.class.getNam
 		
 	}
 	
-	@ExceptionHandler(NegativoExeception.class)
+	@ExceptionHandler(ValorException.class)
 	@ResponseStatus(HttpStatus.NOT_FOUND)
-	public ErrorCode negativoExeception(NegativoExeception e) {
+	public ErrorCode negativoExeception(ValorException e) {
 		ErrorCode ec= new ErrorCode();
 		ec.setCodigo(this.getId());
 		ec.setMensaje(e.getMessage());
@@ -50,9 +50,9 @@ private static final Logger LOG= Logger.getLogger(ExceptionsHandler.class.getNam
 		
 	}
 	
-	@ExceptionHandler(RangoExeception.class)
+	@ExceptionHandler(AlcanceValorException.class)
 	@ResponseStatus(HttpStatus.NOT_FOUND)
-	public ErrorCode rangoExeception(RangoExeception e) {
+	public ErrorCode rangoExeception(AlcanceValorException e) {
 		ErrorCode ec= new ErrorCode();
 		ec.setCodigo(this.getId());
 		ec.setMensaje(e.getMessage());
@@ -62,9 +62,9 @@ private static final Logger LOG= Logger.getLogger(ExceptionsHandler.class.getNam
 		
 	}
 	
-	@ExceptionHandler(CaracteresExeception.class)
+	@ExceptionHandler(ValoresCaracterException.class)
 	@ResponseStatus(HttpStatus.NOT_FOUND)
-	public ErrorCode caracteresExeception(CaracteresExeception e) {
+	public ErrorCode caracteresExeception(ValoresCaracterException e) {
 		ErrorCode ec= new ErrorCode();
 		ec.setCodigo(this.getId());
 		ec.setMensaje(e.getMessage());
@@ -74,9 +74,9 @@ private static final Logger LOG= Logger.getLogger(ExceptionsHandler.class.getNam
 		
 	}
 	
-	@ExceptionHandler(NombreExeception.class)
+	@ExceptionHandler(NombreIncorrectoException.class)
 	@ResponseStatus(HttpStatus.NOT_FOUND)
-	public ErrorCode nombreExeception(NombreExeception e) {
+	public ErrorCode nombreExeception(NombreIncorrectoException e) {
 		ErrorCode ec= new ErrorCode();
 		ec.setCodigo(this.getId());
 		ec.setMensaje(e.getMessage());

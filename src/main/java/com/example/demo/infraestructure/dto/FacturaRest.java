@@ -10,7 +10,6 @@ public class FacturaRest {
 	private List<ItemRest> items;
 	
 	public FacturaRest() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public FacturaRest(Long numero, String nombre, Double valor_total, List<ItemRest> items) {
